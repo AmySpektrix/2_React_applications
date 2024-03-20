@@ -1,0 +1,33 @@
+  /* .gig {
+    ;
+
+  } */
+  
+  h1 {
+    font-size: 3.2em;
+    line-height: 1.1;
+  }
+  .image {
+    width: 15rem;
+    ;
+  }
+  .location{
+    color: darkslategray;
+  }
+  .band_name{
+    color: seagreen;
+    font-size:x-large;
+    font-stretch: semi-expanded 
+  }
+  .description{
+    font-stretch: semi-expanded ;
+  }
+
+  .gig{
+    flex:1;
+    margin:10px;
+    padding: 20px;
+    border: 1px solid #cccc;
+    background-color:rgb(192, 229, 227);
+    border-radius: 10px
+  }
