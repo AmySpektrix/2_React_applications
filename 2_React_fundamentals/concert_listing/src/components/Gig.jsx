@@ -1,11 +1,13 @@
-import React from "react";
+/* eslint-disable react/prop-types */
+// eslint-disable-next-line no-unused-vars
+import React, { useEffect, useState }  from "react";
 import "./gig.css";
 
 
 const Gig = (props) => {
     return (
         <div className="gig">
-            <img className="image" data-testid="image" src={props.imageUrl} alt={props.alt}></img>
+            <img className="image" data-testid="image" src={props.src} alt={props.alt}></img>
             <h3 className="band_name" data-testid="band_name">{props.name}</h3>
             <p className="description" data-testid="description">{props.description}</p>
             <p className="time_date" data-testid="time_date">{props.time}</p>
