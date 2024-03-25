@@ -4,7 +4,23 @@
   padding: 2rem;
   text-align: center;
 }
-
+button{
+  padding: 5px;
+  margin: 0px 5px
+}
 .logo {
   width: 15rem;
+}
+.componentTitle {
+  color: blue;
+}
+.container{
+  display: flex;
+}
+.componentHolder{
+  flex: 1;
+  margin: 10px;
+  padding:10px;
+  border: 2px solid black;
+  border-radius: 10px
 }

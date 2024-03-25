@@ -1,39 +1,55 @@
 import React from "react";
-import "./gig.css"
-import { useState } from "react";
-// import makersLogo from "../assets/Makers-Logo.png";
+import "./gig.css";
+
 
 const Gig = (props) => {
-    const [favourite, setFavourite] = useState(0);
-    
-    const favouriteToggle  = () => {
-        if (favourite==0){
-            setFavourite(1)
-        }
-        else {
-            setFavourite(0)
-        }
-    }
-
-    const favouriteValue = () => {
-        if (favourite==0){
-            return "Favourite 🤍"
-        }
-        else {
-            return "Favourite 🖤"
-        }
-    }
-
     return (
-    <div className="gig">
-        <img className="image" data-testid="image" src={props.src} alt={props.alt}></img>
-        <h3 className="band_name" data-testid="band_name">{props.band_name}</h3>
-        <p classNamed="description" data-testid="description">{props.description}</p>
-        <p className="time_date" data-testid="time_date">{props.time_date}</p>
-        <p className="location"data-testid="location">{props.location}</p>
-        <button data-testid="favourite" onClick={favouriteToggle}>{favouriteValue()}</button>
-    </div>
-        );
+        <div className="gig">
+            <img className="image" data-testid="image" src={props.imageUrl} alt={props.alt}></img>
+            <h3 className="band_name" data-testid="band_name">{props.name}</h3>
+            <p className="description" data-testid="description">{props.description}</p>
+            <p className="time_date" data-testid="time_date">{props.time}</p>
+            <p className="location" data-testid="location">{props.location}</p>
+            <button data-testid="favourite" onClick={props.onFavouriteToggle}>{props.favourited ? "Favourite 🖤" : "Favourite 🤍"}</button>
+        </div>
+    );
 };
 
 export default Gig;
+
+
+// import makersLogo from "../assets/Makers-Logo.png";
+
+// const Gig = (props) => {
+    
+//     const favouriteToggle  = (props) => {
+//         if (props.gig.favourite==0){
+//             props.setGig(props.gig.favourite=1)
+//         }
+//         else {
+//             props.setGig(0)
+//         }
+//     }
+
+//     const favouriteValue = (props) => {
+//         if (props.favourite==0){
+//             return "Favourite 🤍"
+//         }
+//         else {
+//             return "Favourite 🖤"
+//         }
+//     }
+
+//     return (
+//     <div className="gig">
+//         <img className="image" data-testid="image" src={props.src} alt={props.alt}></img>
+//         <h3 className="band_name" data-testid="band_name">{props.band_name}</h3>
+//         <p classNamed="description" data-testid="description">{props.description}</p>
+//         <p className="time_date" data-testid="time_date">{props.time_date}</p>
+//         <p className="location"data-testid="location">{props.location}</p>
+//         <button data-testid="favourite" onClick={favouriteToggle}>{favouriteValue()}</button>
+//     </div>
+//         );
+// };
+
+// export default Gig;

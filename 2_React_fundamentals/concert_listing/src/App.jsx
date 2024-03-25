@@ -3,12 +3,13 @@ import "./App.css";
 import makersLogo from "./assets/Makers-Logo.png";
 import partyQuackie from "./assets/party-quackie.png";
 import wavingQuackie from "./assets/waving-quackie.png";
+import GigList from "./components/GigList";
 
 function App() {
   return (
     <>
     <div className="container">
-      <Gig 
+      {/* <Gig 
         src = {wavingQuackie}
         alt = "black duck waving with the Makers M logo on its chest"
         band_name="The Ducks are Back"
@@ -23,7 +24,8 @@ function App() {
         description="Come shake those tail feathers until the quack of dawn"
         time_date="19:00, 4 August 2024"
         location="National Theatre"
-        />
+        /> */}
+        <GigList></GigList>
       </div>
     </>
   );
